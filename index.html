@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width = device-width, initial-scale = 1">
+  <title>LATTITUDE: Latitude Analysis Dashboard</title>
+
+  <!-- Import the bootstrap stylesheet -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="bootstrap.css">
+</head>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="index.html">LATTITUDE: Latitude Analysis Dashboard</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarColor01">
+      <ul class="navbar-nav ml-auto">
+        <ul class="nav nav-pills">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="index.html" role="button" aria-haspopup="true" aria-expanded="false">Plots</a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="latvtemp.html">vs. Max Temperature</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="latvhumd.html">vs. Humidity</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="latvcloud.html">vs. Cloudiness</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="latvwind.html">vs. Wind Speed</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="compare.html">Comparison</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="dataset.html">Data</a>
+            </li>
+          </ul>
+      </ul>
+    </div>
+</nav>
+
+<style>
+  body {
+    background-image: url('assets/shutterstock_539880832.jpg');
+  }
+</style>
+
+<body>
+    <br>
+    <div class="row">
+        <div class="col-xl-8">
+          <div class="container">
+            <div class="jumbotron">
+              <h4 class="display-5">Summary: Latitude vs. X</h4>
+              <br>
+              <hr class="my-4">
+              <div class="col-xl-4">
+                <div class="container-md">
+                  <img src="visualizations/gmap_heatmap.PNG" width= "257.5" height = "183" class="img-fluid img-thumbnail" alt="local" style="margin: 0px 10px; float: left">
+                </div>
+              </div>
+              <p>This project analyzed the ways in which weather changes as you get closer to the equator. The primary hypothesis of this analysis was that the temperature is generally hotter the nearer the equator you are. Secondary hypotheses were included to ascertain whether or not other weather factors could also be observed to follow a pattern the nearer a city's proximity to the equator.</p>
+              <br>
+              <p>To accomplish this analysis, we harvested a random sample of over 500 global cities weather information from the OpenWeatherMap.org API. The dataset we compiled was then converted from the raw dictionary into a Pandas DataFrame for analysis.</p>
+              <br>
+              <p>Once the dataset was assembled, we utilized Matplotlib to generate various scatter plots to illustrate different aspects of weather vs. latitude. Factors included in our analysis included: temperature, cloudiness, wind speed, and humidity. This site provides the source data and visualizations that were created as part of this analysis project, as well as explanations and descriptions of any trends and correlations that we observed.</p>            
+              <br>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4">
+            <div class="container">
+              <div class="jumbotron">
+                <h4 class="display-5">Visualizations</h4>
+                <p>Click on the images to follow the link.</p>
+                <hr class="my-4">
+                <div class="row">
+                  <div class="col">
+                    <div class="thumbnail">
+                     <a href="latvtemp.html">
+                      <img src="visualizations/LATvTEMP.png" href="latvtemp.html" width= "180" height = "144" class="img-fluid img-thumbnail" alt="local" style="margin: 5px 5px">
+                     </a>
+                    </div>  
+                  </div>
+                  <div class="col">
+                    <div class="thumbnail">
+                     <a href="latvhumd.html">
+                      <img src="visualizations/LATvHUMD.png" href="latvhumd.html" width= "180" height = "144" class="img-fluid img-thumbnail" alt="local" style="margin: 5px 5px">
+                     </a>
+                    </div>
+                  </div>
+                <div class="w-100"></div>
+                  <div class="col">
+                    <div class="thumbnail">
+                     <a href="latvcloud.html">
+                      <img src="visualizations/LATvCLOUD.png" href="latvcloud.html" width= "180" height = "144" class="img-fluid img-thumbnail" alt="local" style="margin: 5px 5px">
+                     </a>
+                    </div>
+                  </div>  
+                  <div class="col">
+                    <div class="thumbnail">
+                     <a href="latvwind.html"> 
+                      <img src="visualizations/LATvWIND.png" href="latvwind.html" width= "180" height = "144" class="img-fluid img-thumbnail" alt="local" style="margin: 5px 5px">
+                     </a>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  <br>  
+
+
+
+
+
+</body>
